@@ -5,7 +5,7 @@ export default function Header() {
     const [menuModal, setMenuModal] = useState(false);
 
     return (
-        <div className="NanumSquareNeo-Variable w-full px-12 fixed z-2 bg-white">
+        <div className="NanumSquareNeo-Variable w-full px-12 fixed z-40 bg-white">
             <div className="flex  justify-between items-center h-16 border-b">
                 <div className="text-lg">
                     JUNYOUNG
@@ -70,7 +70,7 @@ export default function Header() {
                 
             </div>
             <div className="transition-2s">
-            <div className={`grid gap-y-3 pt-4 text-sm  ${menuModal?'':'hidden'}  
+            <div className={`grid gap-y-3 pt-4 pb-2 text-sm  ${menuModal?'':'hidden'}  
             `}>
                 <div>
                     Who I am?

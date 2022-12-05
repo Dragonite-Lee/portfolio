@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 import Header from '../components/header'
-import WhoAmI from '../components/whoAmI'
+import Content from '../components/content'
 
 export default function Home() {
   const snowRef = useRef(null)
@@ -37,7 +37,7 @@ export default function Home() {
   }
   
   return (
-    <div className='bg-gradient-to-b from-[#1b2735] via-[#3F4852] to-[#090a0f] h-screen overflow-hidden'>
+    <div className='min-w-[516px] bg-gradient-to-b from-[#1b2735] via-[#3F4852] to-[#090a0f] h-full overflow-hidden'>
        <Head>
           <title>junyoung portfolio</title>
           <meta name='description' content='안녕하세요 이준영입니다.' />
@@ -47,7 +47,7 @@ export default function Home() {
       <Header></Header>
       <div className='static'>
         <div ref={snowRef} className='pt-[64px]'>
-          <WhoAmI />
+          <Content />
         </div>
         
       </div>
