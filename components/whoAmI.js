@@ -38,10 +38,10 @@ export default function WhoAmI() {
                 </div>
             </div>
             <div className="text-white text-center mt-12 text-lg px-12">
-                <span className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-[#26EFE6] to-[#094BA0]">FrontEnd</span>를 공부하며 바닥에 차곡차곡 쌓이는 눈처럼 실력을 쌓아나가는 개발자입니다. <br />
-                새로운 것을 학습하는 것을 두려워하지 않으며,  <span className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-[#26EFE6] to-[#094BA0]">BackEnd</span>에도 관심사를 넓혀가고 있습니다. <br />
-                또한, 개발이 아닌 여러가지 분야에도 <span className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-[#26EFE6] to-[#094BA0]">감수성</span>을 가지며, 개발을 단순히 코딩이 아닌 <br />
-                <span className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-[#26EFE6] to-[#094BA0]">문제해결 수단</span>으로 보기 위한 시야를 넓히려고 노력중입니다. <br />
+                <span className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-[#26EFE6] to-[#FC94C4]">FrontEnd</span>를 공부하며 바닥에 차곡차곡 쌓이는 눈처럼 실력을 쌓아나가는 개발자입니다. <br />
+                새로운 것을 학습하는 것을 두려워하지 않으며,  <span className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-[#26EFE6] to-[#FC94C4]">BackEnd</span>에도 관심사를 넓혀가고 있습니다. <br />
+                또한, 개발이 아닌 여러가지 분야에도 <span className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-[#26EFE6] to-[#FC94C4]">감수성</span>을 가지며, 개발을 단순히 코딩이 아닌 <br />
+                <span className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-[#26EFE6] to-[#FC94C4]">문제해결 수단</span>으로 보기 위한 시야를 넓히려고 노력중입니다. <br />
             </div>
         </div>
     )

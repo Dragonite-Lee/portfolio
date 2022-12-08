@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 import Header from '../components/header'
 import Content from '../components/content'
+import {NOTION_TOKEN,NOTION_DATABASE_ID} from '../config/index'
 
 export default function Home() {
   const snowRef = useRef(null)
@@ -55,4 +56,30 @@ export default function Home() {
       
     </div>
   )
+}
+
+//빌드 타임에 호출 데이터가져와서 화면에 렌더링
+export async function getStaticProps() {
+
+  const options = {
+    method: 'POST',
+    headers: {
+      accept: 'application/json',
+      'Notion-Version': '2022-06-28',
+      'content-type': 'application/json',
+      'Authorization' : `Bearer ${NOTION_TOKEN}`
+    },
+    body: JSON.stringify({page_size: 100})
+  };
+  
+  const res = await fetch(`https://api.notion.com/v1/databases/${NOTION_DATABASE_ID}/query`, options)
+
+  const result = await res.json()
+  console.log(result)
+
+  
+  
+  return {
+    props: {}, // will be passed to the page component as props
+  }
 }
