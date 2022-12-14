@@ -3,8 +3,7 @@ import Link from "next/link"
 
 export default function Skills({skillsName}) {
     
-    let scroll = window.screenTop;
-    console.log(scroll)
+    
     return(
         <div className="w-full NanumSquareNeo-Variable">
             <div className="text-2xl text-center pt-24 text-white">Skills</div>
