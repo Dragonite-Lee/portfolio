@@ -1,12 +1,22 @@
-import { useState } from "react"
+import { useState } from "react";
+import useScrollRedux from "../hooks/useScrollRedux";
 
 export default function Header() {
-
+    const [state, dispatch] = useScrollRedux();
     const [menuModal, setMenuModal] = useState(false);
 
+    const toWhoAmI = () => {
+        console.log(state.WhoAmI)
+        window.scrollTo(0,state.WhoAmI)
+    }
+    const toSkills = () => {
+        console.log(state.Skills)
+        window.scrollTo(0,state.Skills)
+    }
+
     return (
-        <div className="NanumSquareNeo-Variable w-full px-12 fixed z-40 bg-white">
-            <div className="flex  justify-between items-center h-16 border-b">
+        <div className="NanumSquareNeo-Variable w-full px-12 fixed z-40 bg-white min-w-[516px]">
+            <div className="flex justify-between items-center h-16 border-b">
                 <div className="text-lg">
                     JUNYOUNG
                 </div>
@@ -51,10 +61,10 @@ export default function Header() {
                 </div>
                 
                 <div className="hidden md:flex gap-6">
-                    <div>
+                    <div onClick={()=>toWhoAmI()}>
                         Who I am?
                     </div>
-                    <div>
+                    <div onClick={()=>toSkills()}>
                         Skills
                     </div>
                     <div>

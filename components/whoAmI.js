@@ -1,11 +1,28 @@
 import Image from "next/image"
 import Link from "next/link"
+import { useRef, useEffect } from "react"
+import useScrollRedux from "../hooks/useScrollRedux";
+import { dispatchWhoAmI } from "../store/modules/scroll";
 
 export default function WhoAmI() {
+    const [state, dispatch] = useScrollRedux();
+    
+    const scrollTopRef = useRef(null);
+    
+    const distanceChildFromTop = () => {
+        let whoAmITop = scrollTopRef.current.getBoundingClientRect().top + window.pageYOffset;;
+        console.log("whoami top", whoAmITop);
+        dispatch(dispatchWhoAmI(whoAmITop))
+    };
 
+    useEffect(() => {
+        window.addEventListener("scroll", distanceChildFromTop);
+    }, []);
+    
+    console.log(state.WhoAmI)
     return (
-        <div className="w-full NanumSquareNeo-Variable">
-            <div className="text-2xl text-center pt-24 text-white">Who am I?</div>
+        <div className="w-full NanumSquareNeo-Variable" >
+            <div className="text-2xl text-center pt-24 text-white" ref={scrollTopRef} >Who am I?</div>
             <div className="md:flex md:px-12 md:gap-24 lg:gap-36 text-center justify-center items-center pt-20 ">
                 <div>
                     <Image 

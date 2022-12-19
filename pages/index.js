@@ -5,7 +5,7 @@ import Header from '../components/header'
 import Content from '../components/content'
 import {NOTION_TOKEN,NOTION_DATABASE_ID} from '../config/index'
 
-export default function Home({skillsName}) {
+export default function HomePage({skillsName}) {
   const snowRef = useRef(null)
   useEffect(()=>{
 
@@ -40,7 +40,7 @@ export default function Home({skillsName}) {
   }
   
   return (
-    <div className='min-w-[516px] bg-gradient-to-b from-[#1b2735] via-[#3F4852] to-[#84787E] h-full overflow-hidden'>
+    <div className=' bg-gradient-to-b from-[#1b2735] via-[#3F4852] to-[#84787E] h-full overflow-hidden'>
        <Head>
           <title>junyoung portfolio</title>
           <meta name='description' content='안녕하세요 이준영입니다.' />
@@ -48,7 +48,7 @@ export default function Home({skillsName}) {
       </Head>
 
       <Header></Header>
-      <div className='static'>
+      <div className='static min-w-[516px]'>
         <div ref={snowRef} className='pt-[64px]'>
           <Content skillsName={skillsName} />
         </div>
