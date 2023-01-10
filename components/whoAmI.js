@@ -10,9 +10,11 @@ export default function WhoAmI() {
     const scrollTopRef = useRef(null);
     
     const distanceChildFromTop = () => {
-        let whoAmITop = scrollTopRef.current.getBoundingClientRect().top + window.pageYOffset;;
-        console.log("whoami top", whoAmITop);
-        dispatch(dispatchWhoAmI(whoAmITop))
+        if(scrollTopRef.current) {
+            let whoAmITop = scrollTopRef.current.getBoundingClientRect().top + window.pageYOffset;;
+            console.log("whoami top", whoAmITop);
+            dispatch(dispatchWhoAmI(whoAmITop))
+        }
     };
 
     useEffect(() => {

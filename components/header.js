@@ -82,10 +82,10 @@ export default function Header() {
             <div className="transition-2s">
             <div className={`grid gap-y-3 pt-4 pb-2 text-sm  ${menuModal?'':'hidden'}  
             `}>
-                <div>
+                <div onClick={()=>toWhoAmI()}>
                     Who I am?
                 </div>
-                <div>
+                <div onClick={()=>toSkills()}>
                     Skills
                 </div>
                 <div>
