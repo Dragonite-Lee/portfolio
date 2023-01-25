@@ -19,18 +19,20 @@ export default function Skills({skillsName}) {
     const skillTopRef4 = useRef(null);
 
     const distanceChildFromTop = () => {
-        let skillsTop = scrollTopRef.current.getBoundingClientRect().top + window.pageYOffset;
-        let skill1Top = skillTopRef1.current.getBoundingClientRect().top + window.pageYOffset;
-        let skill2Top = skillTopRef2.current.getBoundingClientRect().top + window.pageYOffset;
-        let skill3Top = skillTopRef3.current.getBoundingClientRect().top + window.pageYOffset;
-        let skill4Top = skillTopRef4.current.getBoundingClientRect().top + window.pageYOffset;
-        // console.log("skills top", skillsTop);
-        dispatch(dispatchSkills(skillsTop));
-        setTop(window.pageYOffset + window.innerHeight);
-        setSkills1(skill1Top);
-        setSkills2(skill2Top);
-        setSkills3(skill3Top);
-        setSkills4(skill4Top);
+        if(scrollTopRef.current) {
+            let skillsTop = scrollTopRef.current.getBoundingClientRect().top + window.pageYOffset;
+            let skill1Top = skillTopRef1.current.getBoundingClientRect().top + window.pageYOffset;
+            let skill2Top = skillTopRef2.current.getBoundingClientRect().top + window.pageYOffset;
+            let skill3Top = skillTopRef3.current.getBoundingClientRect().top + window.pageYOffset;
+            let skill4Top = skillTopRef4.current.getBoundingClientRect().top + window.pageYOffset;
+            // console.log("skills top", skillsTop);
+            dispatch(dispatchSkills(skillsTop));
+            setTop(window.pageYOffset + window.innerHeight);
+            setSkills1(skill1Top);
+            setSkills2(skill2Top);
+            setSkills3(skill3Top);
+            setSkills4(skill4Top);
+        }
     };
 
     useEffect(() => {

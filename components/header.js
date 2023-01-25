@@ -8,11 +8,15 @@ export default function Header() {
     const toWhoAmI = () => {
         console.log(state.WhoAmI)
         window.scrollTo(0,state.WhoAmI)
-    }
+    };
     const toSkills = () => {
         console.log(state.Skills)
         window.scrollTo(0,state.Skills)
-    }
+    };
+    const toActicity_Certificate = () => {
+        console.log(state.Acticity_Certificate)
+        window.scrollTo(0,state.Activity_Certificate)
+    };
 
     return (
         <div className="NanumSquareNeo-Variable w-full px-12 fixed z-40 bg-white min-w-[516px]">
@@ -67,8 +71,8 @@ export default function Header() {
                     <div onClick={()=>toSkills()}>
                         Skills
                     </div>
-                    <div>
-                        Award & Certificate
+                    <div onClick={()=>toActicity_Certificate()}>
+                        Acticity & Certificate
                     </div>
                     <div>
                         Career
@@ -88,7 +92,7 @@ export default function Header() {
                 <div onClick={()=>toSkills()}>
                     Skills
                 </div>
-                <div>
+                <div onClick={()=>toActicity_Certificate()}>
                     Award & Certificate
                 </div>
                 <div>

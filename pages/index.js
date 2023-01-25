@@ -83,7 +83,7 @@ export async function getStaticProps() {
     })
   }
   
-  const res = await fetch(`https://api.notion.com/v1/databases/${NOTION_DATABASE_ID}/query`, options)
+  const res = await fetch(`https://api.notion.com/v1/databases/${NOTION_DATABASE_ID}/query`, options);
 
   const skills = await res.json()
   
