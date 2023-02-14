@@ -7,37 +7,37 @@ import {NOTION_TOKEN,NOTION_DATABASE_ID} from '../config/index'
 
 export default function HomePage({skillsName}) {
   const snowRef = useRef(null)
-  useEffect(()=>{
+  // useEffect(()=>{
 
-    // *눈을 만들어주는 함수
-    function createSnow() {
-      if (typeof window !== 'undefined') {
-        const el = document.createElement('div');
-        el.classList.add(`w-[7px]`);
-        el.classList.add(`h-[7px]`)
-        el.classList.add('bg-white')
-        el.classList.add('opacity-0')
-        el.classList.add('rounded-[50%]')
-        el.classList.add('relative')
-        el.classList.add('blur-[1px]')
-        el.classList.add(`animate-[snow_linear_infinite]`)
-        el.style.marginLeft = randomPosition() + 'px'
-        el.style.animationDuration = `${Math.random() * (20 - 8) + 8}s`
-        snowRef.current.appendChild(el);
-      }
-    };
-    // *눈 생성 함수
-    for(let i = 0; i < 500; i++) {
-      createSnow()  
-    }
-  },[])
+  //   // *눈을 만들어주는 함수
+  //   function createSnow() {
+  //     if (typeof window !== 'undefined') {
+  //       const el = document.createElement('div');
+  //       el.classList.add(`w-[7px]`);
+  //       el.classList.add(`h-[7px]`)
+  //       el.classList.add('bg-white')
+  //       el.classList.add('opacity-0')
+  //       el.classList.add('rounded-[50%]')
+  //       el.classList.add('relative')
+  //       el.classList.add('blur-[1px]')
+  //       el.classList.add(`animate-[snow_linear_infinite]`)
+  //       el.style.marginLeft = randomPosition() + 'px'
+  //       el.style.animationDuration = `${Math.random() * (20 - 8) + 8}s`
+  //       snowRef.current.appendChild(el);
+  //     }
+  //   };
+  //   // *눈 생성 함수
+  //   for(let i = 0; i < 500; i++) {
+  //     createSnow()  
+  //   }
+  // },[])
   
   
-  function randomPosition() {
-    if (typeof window !== 'undefined') {
-      return Math.floor(Math.random() * window.innerWidth)
-    }
-  }
+  // function randomPosition() {
+  //   if (typeof window !== 'undefined') {
+  //     return Math.floor(Math.random() * window.innerWidth)
+  //   }
+  // }
   
   return (
     <div className=' bg-gradient-to-b from-[#1b2735] via-[#3F4852] to-[#84787E] h-full overflow-hidden'>

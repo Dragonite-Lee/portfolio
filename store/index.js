@@ -1,11 +1,11 @@
 import { createWrapper } from "next-redux-wrapper";
 import { configureStore } from "@reduxjs/toolkit";
 import reducer from './modules';
-import logger from 'redux-logger';
+
 
 const makeStore = () => configureStore({ 
     reducer,
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
     devTools: process.env.NODE_ENV !== 'production',
 });
 

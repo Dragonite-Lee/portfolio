@@ -19,10 +19,10 @@ export default function Header() {
     };
 
     return (
-        <div className="NanumSquareNeo-Variable w-full px-12 fixed z-40 bg-white min-w-[516px]">
-            <div className="flex justify-between items-center h-16 border-b">
+        <div className="NanumSquareNeo-Variable w-full px-12 fixed z-40 bg-[#D7E9FF] min-w-[516px] border-b font-bold">
+            <div className="flex justify-between items-center h-16 ">
                 <div className="text-lg">
-                    JUNYOUNG
+                    PORTFOLIO
                 </div>
                 <div className="md:hidden ">
                     <button
@@ -66,7 +66,7 @@ export default function Header() {
                 
                 <div className="hidden md:flex gap-6">
                     <div onClick={()=>toWhoAmI()}>
-                        Who I am?
+                        Who am I
                     </div>
                     <div onClick={()=>toSkills()}>
                         Skills
@@ -87,7 +87,7 @@ export default function Header() {
             <div className={`grid gap-y-3 pt-4 pb-2 text-sm  ${menuModal?'':'hidden'}  
             `}>
                 <div onClick={()=>toWhoAmI()}>
-                    Who I am?
+                    Who am I
                 </div>
                 <div onClick={()=>toSkills()}>
                     Skills
