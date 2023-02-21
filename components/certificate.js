@@ -44,16 +44,15 @@ export default function Certificate() {
     
     useEffect(() => {
         window.addEventListener("scroll", distanceChildFromTop);
-       
-    }, []);
+    }, [distanceChildFromTop]);
     
     return (
         <div className="w-full NanumSquareNeo-Variable h-[calc(400vh-16rem-396px)] bg-gradient-to-b from-[#1B2735] to-[#2A4982]" ref={scrollTopRef}>
             <div className="sticky top-[4rem] text-3xl text-left text-white py-12 pl-12">CERTIFICATE</div>
             <div>
                 {certificate_arr.map((data) => (
-                    <div className="sticky top-[12rem]">
-                        <div key={data.id} className=" h-[calc(100vh-4rem-132px)] pl-12">
+                    <div key={data.id} className="sticky top-[12rem]">
+                        <div className=" h-[calc(100vh-4rem-132px)] pl-12">
                             <Image 
                                 src={require(`../src/snow_${data.star}.png`)}
                                 alt="눈송이"

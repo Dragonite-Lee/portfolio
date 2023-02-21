@@ -25,7 +25,7 @@ export default function WhoAmI() {
     useEffect(() => {
         window.addEventListener("scroll", distanceChildFromTop);
         window.addEventListener("scroll", scrollUl);
-    }, []);
+    }, [distanceChildFromTop, scrollUl]);
     
     return (
         <div className="w-full NanumSquareNeo-Variable h-[calc(200vh-8rem)]" ref={scrollTopRef}>

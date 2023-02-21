@@ -18,7 +18,7 @@ export default function Skills({skillsName}) {
 
     useEffect(() => {
         window.addEventListener("scroll", distanceChildFromTop);
-    }, []);
+    }, [distanceChildFromTop]);
     
     
     return(
