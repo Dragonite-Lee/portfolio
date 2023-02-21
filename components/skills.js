@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { useRef, useEffect, useState, use } from "react"
+import { useRef, useEffect, useState } from "react"
 import useScrollRedux from "../hooks/useScrollRedux";
 import { dispatchSkills } from "../store/modules/scroll";
 
@@ -8,15 +8,11 @@ export default function Skills({skillsName}) {
     const [state, dispatch] = useScrollRedux();
     const [top, setTop] = useState(0);
     const scrollTopRef = useRef(null);
-
+    
     const distanceChildFromTop = () => {
         if(scrollTopRef.current) {
             let skillsTop = scrollTopRef.current.getBoundingClientRect().top + window.pageYOffset;
-            
-            // console.log("skills top", skillsTop);
             dispatch(dispatchSkills(skillsTop));
-            setTop(window.pageYOffset + window.innerHeight);
-            
         }
     };
 
@@ -51,7 +47,7 @@ export default function Skills({skillsName}) {
             </div>
             <div className="absolute right-0 Pretendard-Regular w-1/2 h-[calc(100vh-4rem)]">
                 <div>
-                    <div className="sticky top-[10rem] mx-16 mt-24 pl-6 pt-12 w-5/6 h-[calc(100vh-16rem)] text-black bg-[#D7E9FF] rounded-[30px]">
+                    <div className={`sticky bottom-[12vh] translate-y-2 z-40 mx-16 mt-24 pl-6 pt-12 w-5/6 h-[calc(100vh-16rem)] text-black bg-[#D7E9FF] rounded-[30px]`}>
                         <div className="text-3xl text-[#502924]">
                             html & css
                         </div>
@@ -64,7 +60,7 @@ export default function Skills({skillsName}) {
                             <li>크로스 브라우징 작업을 할 수 있습니다.</li>
                         </ul>
                     </div>
-                    <div className="sticky top-[10rem] mx-16 mt-[12rem] pl-6 pt-12 w-5/6 h-[calc(100vh-16rem)] text-black bg-[#94A9E0] rounded-[30px]">
+                    <div className={`sticky bottom-[12vh] translate-y-4 z-30 mx-16 pl-6 pt-12 w-5/6 h-[calc(100vh-16rem)] text-black bg-[#94A9E0] rounded-[30px]`}>
                         <div className="text-3xl text-[#502924]">
                             javascript
                         </div>
@@ -75,7 +71,7 @@ export default function Skills({skillsName}) {
                             <li>DOM과 같이 웹 브라우저의 구동방식에 대해 이해하고 있습니다.</li>
                         </ul>
                     </div>
-                    <div className="sticky top-[10rem] mx-16 mt-[12rem] pl-6 pt-12 w-5/6 h-[calc(100vh-16rem)] text-black bg-[#2A4982] rounded-[30px]">
+                    <div className={`sticky bottom-[12vh] translate-y-12 z-20 mx-16 pl-6 pt-12 w-5/6 h-[calc(100vh-16rem)] text-black bg-[#2A4982] rounded-[30px]`}>
                         <div className="text-3xl text-[#C4CDD1]">
                             react
                         </div>
@@ -87,7 +83,7 @@ export default function Skills({skillsName}) {
                             <li>Graphql을 사용할 수 있습니다.</li>
                         </ul>
                     </div>
-                    <div className="sticky top-[10rem] mx-16 mt-[12rem] pl-6 pt-12 w-5/6 h-[calc(100vh-16rem)] text-black bg-[#334D6D] rounded-[30px]">
+                    <div className={`sticky bottom-[12vh] translate-y-16 z-10 mx-16 pl-6 pt-12 w-5/6 h-[calc(100vh-16rem)] text-black bg-[#334D6D] rounded-[30px]`}>
                         <div className="text-3xl text-[#C4CDD1]">
                             git & github
                         </div>

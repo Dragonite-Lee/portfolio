@@ -20,7 +20,6 @@ export default function WhoAmI() {
     const scrollUl = () => {
         const height = window.scrollY;//(300,1) (1300,0.4)
         const uiOpacity = -1/1000 * height + 13/10
-        console.log(height)
         if(scrollopacity.current) scrollopacity.current.style.opacity = uiOpacity;
     }
     useEffect(() => {

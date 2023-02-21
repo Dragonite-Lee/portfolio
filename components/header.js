@@ -6,16 +6,16 @@ export default function Header() {
     const [menuModal, setMenuModal] = useState(false);
 
     const toWhoAmI = () => {
-        console.log(state.WhoAmI)
-        window.scrollTo(0,state.WhoAmI)
+        // console.log(state.WhoAmI)
+        window.scrollTo({left: 0, top : state.WhoAmI, behavior : 'smooth'})
     };
     const toSkills = () => {
-        console.log(state.Skills)
-        window.scrollTo(0,state.Skills)
+        // console.log(state.Skills)
+        window.scrollTo({left: 0, top : state.Skills, behavior : 'smooth'})
     };
-    const toActicity_Certificate = () => {
-        console.log(state.Acticity_Certificate)
-        window.scrollTo(0,state.Activity_Certificate)
+    const toCertificate = () => {
+        // console.log(state.Certificate)
+        window.scrollTo({left: 0, top : state.Certificate, behavior : 'smooth'})
     };
 
     return (
@@ -71,8 +71,11 @@ export default function Header() {
                     <div onClick={()=>toSkills()}>
                         Skills
                     </div>
-                    <div onClick={()=>toActicity_Certificate()}>
-                        Acticity & Certificate
+                    <div onClick={()=>toCertificate()}>
+                        Certificate
+                    </div>
+                    <div>
+                        Acticity
                     </div>
                     <div>
                         Career
@@ -92,8 +95,11 @@ export default function Header() {
                 <div onClick={()=>toSkills()}>
                     Skills
                 </div>
-                <div onClick={()=>toActicity_Certificate()}>
-                    Award & Certificate
+                <div onClick={()=>toCertificate()}>
+                    Certificate
+                </div>
+                <div>
+                    Acticity
                 </div>
                 <div>
                     Career
