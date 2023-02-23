@@ -52,10 +52,13 @@ export default function Certificate() {
             <div>
                 {certificate_arr.map((data) => (
                     <div key={data.id} className="sticky top-[12rem]">
-                        <div className=" h-[calc(100vh-4rem-132px)] pl-12">
+                        <div className={`h-[calc(100vh-4rem-132px)] ${data.id%2===0 ? '' : 'pt-56'} 
+                            ${data.id%4===0 ? 'pl-12' : data.id%4===1 ? 'pl-[25vw]' : data.id%4===2 ? 'pl-[50vw]' : data.id%4===3 ? 'pl-[75vw]' : ''}
+                        `}>
                             <Image 
                                 src={require(`../src/snow_${data.star}.png`)}
                                 alt="눈송이"
+                                className="animate-[snowTurn_4s_linear_infinite]"
                             />
                             <div className="text-white Pretendard-Regular text-left">
                                 <div className="text-2xl">

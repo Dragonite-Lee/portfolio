@@ -46,9 +46,16 @@ module.exports = {
             opacity : '1',
             transform : 'translateY(1000px)',
           }
+        },
+        snowTurn: {
+          '0%' : {transform:"rotateY(0deg)"},
+          '50%' : {transform:"rotateY(180deg)"},
+          '100%' : {transform:"rotateY(360deg)"},
         }
-      }
-
+      },
+      // animation: {
+      //   snowTurn: "snowTurn 4s linear",
+      // },
     },
   },
   plugins: [Myclass],
