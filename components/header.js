@@ -17,6 +17,14 @@ export default function Header() {
         // console.log(state.Certificate)
         window.scrollTo({left: 0, top : state.Certificate, behavior : 'smooth'})
     };
+    const toAward = () => {
+        // console.log(state.Award)
+        window.scrollTo({left: 0, top : state.Award, behavior : 'smooth'})
+    };
+    const toActivity = () => {
+        // console.log(state.Award)
+        window.scrollTo({left: 0, top : state.Activity, behavior : 'smooth'})
+    };
 
     return (
         <div className="NanumSquareNeo-Variable w-full px-12 fixed z-40 bg-[#D7E9FF] min-w-[516px] border-b font-bold">
@@ -74,11 +82,11 @@ export default function Header() {
                     <div onClick={()=>toCertificate()}>
                         Certificate
                     </div>
-                    <div>
-                        Acticity
+                    <div onClick={()=>toAward()}>
+                        Award
                     </div>
-                    <div>
-                        Career
+                    <div onClick={()=>toActivity()}>
+                        Activity
                     </div>
                     <div>
                         Projects
@@ -98,11 +106,11 @@ export default function Header() {
                 <div onClick={()=>toCertificate()}>
                     Certificate
                 </div>
-                <div>
-                    Acticity
+                <div onClick={()=>toAward()}>
+                    Award
                 </div>
-                <div>
-                    Career
+                <div onClick={()=>toActivity()}>
+                    Activity
                 </div>
                 <div>
                     Projects

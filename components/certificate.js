@@ -52,7 +52,7 @@ export default function Certificate() {
             <div>
                 {certificate_arr.map((data) => (
                     <div key={data.id} className="sticky top-[12rem]">
-                        <div className={`h-[calc(100vh-4rem-132px)] ${data.id%2===0 ? '' : 'pt-56'} 
+                        <div className={`h-[calc(100vh-4rem-132px)] ${data.id%2===0 ? '' : 'pt-64'} 
                             ${data.id%4===0 ? 'pl-12' : data.id%4===1 ? 'pl-[25vw]' : data.id%4===2 ? 'pl-[50vw]' : data.id%4===3 ? 'pl-[75vw]' : ''}
                         `}>
                             <Image 

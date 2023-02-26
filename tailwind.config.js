@@ -51,11 +51,13 @@ module.exports = {
           '0%' : {transform:"rotateY(0deg)"},
           '50%' : {transform:"rotateY(180deg)"},
           '100%' : {transform:"rotateY(360deg)"},
+        },
+        roundTurn: {
+          '0%' : {transform: 'rotate(0deg)'},
+          '50%' : {transform: 'rotate(180deg)'},
+          '100%' : {transform: 'rotate(360deg)'},
         }
       },
-      // animation: {
-      //   snowTurn: "snowTurn 4s linear",
-      // },
     },
   },
   plugins: [Myclass],

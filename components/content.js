@@ -1,6 +1,8 @@
 import WhoAmI from "./whoAmI"
 import Skills from "./skills"
 import Certificate from "./certificate"
+import Award from "./award"
+import Activity from "./activity"
 
 export default function Content({skillsName}) {
 
@@ -9,6 +11,8 @@ export default function Content({skillsName}) {
             <WhoAmI />
             <Skills skillsName={skillsName} />
             <Certificate />
+            <Award />
+            <Activity />
         </div>
     )
 }
