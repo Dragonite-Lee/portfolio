@@ -44,7 +44,7 @@ export default function Award() {
             </div>
             {
                 award_arr.map((data) => (
-                    <div key={data.id} className={`Pretendard-Regular text-white absolute 
+                    <div key={data.id} className={`Pretendard-Regular text-white absolute px-12 
                         ${data.id % 2 === 0 ? 'left-1/4 top-1/4 translate-x-[-50%] translate-y-[-50%]' : 'left-3/4 top-3/4 translate-x-[-50%] translate-y-[-50%]'}
                     `}>
                         <div className="text-2xl">{data.name}</div>

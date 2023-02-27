@@ -5,8 +5,7 @@ const initialState = {
     Skills: 0,
     Certificate: 0,
     Award: 0,
-    Activity: 0,
-    Project: 0,
+    Activity_Project: 0,
 };
 
 const scroll = createSlice({
@@ -25,11 +24,8 @@ const scroll = createSlice({
         dispatchAward: (state, action) => {
             state.Award = action.payload;
         },
-        dispatchActivity: (state, action) => {
-            state.Activity = action.payload;
-        },
-        dispatchProject: (state, action) => {
-            state.Project = action.payload;
+        dispatchActivity_Project: (state, action) => {
+            state.Activity_Project = action.payload;
         },
     }
 })
@@ -41,6 +37,6 @@ export const {
     dispatchSkills,
     dispatchCertificate,
     dispatchProject,
-    dispatchActivity,
+    dispatchActivity_Project,
     dispatchAward
 } = scroll.actions;

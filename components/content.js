@@ -2,7 +2,7 @@ import WhoAmI from "./whoAmI"
 import Skills from "./skills"
 import Certificate from "./certificate"
 import Award from "./award"
-import Activity from "./activity"
+import Activity_Project from "./activity_project"
 
 export default function Content({skillsName}) {
 
@@ -12,7 +12,7 @@ export default function Content({skillsName}) {
             <Skills skillsName={skillsName} />
             <Certificate />
             <Award />
-            <Activity />
+            <Activity_Project />
         </div>
     )
 }

@@ -21,9 +21,9 @@ export default function Header() {
         // console.log(state.Award)
         window.scrollTo({left: 0, top : state.Award, behavior : 'smooth'})
     };
-    const toActivity = () => {
+    const toActivity_Project = () => {
         // console.log(state.Award)
-        window.scrollTo({left: 0, top : state.Activity, behavior : 'smooth'})
+        window.scrollTo({left: 0, top : state.Activity_Project, behavior : 'smooth'})
     };
 
     return (
@@ -85,11 +85,8 @@ export default function Header() {
                     <div onClick={()=>toAward()}>
                         Award
                     </div>
-                    <div onClick={()=>toActivity()}>
-                        Activity
-                    </div>
-                    <div>
-                        Projects
+                    <div onClick={()=>toActivity_Project()}>
+                        Activity & Projects
                     </div>
                 </div>
                 
@@ -109,11 +106,8 @@ export default function Header() {
                 <div onClick={()=>toAward()}>
                     Award
                 </div>
-                <div onClick={()=>toActivity()}>
-                    Activity
-                </div>
-                <div>
-                    Projects
+                <div onClick={()=>toActivity_Project()}>
+                    Activity & Projects
                 </div>
             </div>
             </div>
