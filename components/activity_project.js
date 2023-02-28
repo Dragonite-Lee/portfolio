@@ -9,6 +9,7 @@ const activity_arr = [
         content: 'UI/UX의 정의와 좋은 UI/UX에 대해 공부',
         date: '2021년 2월 1일 → 2021년 2월 28일',
         cdSrc: 'CD_언더패스', 
+        prSrc: 'underpath',
         id: 0,
     },
     {
@@ -16,6 +17,7 @@ const activity_arr = [
         content: '프론트엔드의 전반적인 언어를 공부',
         date: '2021년 2월 21일 → 2021년 5월 23일',
         cdSrc: 'CD_패캠',
+        prSrc: 'fastcampus',
         id: 1,
     },
     {
@@ -23,6 +25,7 @@ const activity_arr = [
         content: '한양대에리카 단기임대플랫폼 창업동아리',
         date: '2022년 8월 1일 → 현재진행중',
         cdSrc: 'CD_흥부',
+        prSrc: 'heungbu ',
         id: 2,
     }
 ]
@@ -37,7 +40,7 @@ export default function Activity_Project() {
         if(scrollTopRef.current) {
             let activity_projectTop = scrollTopRef.current.getBoundingClientRect().top + window.pageYOffset;
             // console.log("activity_project top", activity_project);
-            dispatch(dispatchActivity_Project(activity_projectTop))
+            dispatch(dispatchActivity_Project(activity_projectTop));
         }
     };
     // const scrollAnimation = () => {
@@ -68,19 +71,21 @@ export default function Activity_Project() {
                 {/* <div className=" relative h-[calc(100vh-4rem)] text-left text-white py-12 pl-12" ref={scrollanimation}>
                     <div className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] text-[4.5rem]" ref={animationTarget}>ACTIVITY & PROJECT</div>
                 </div> */}<div className="text-3xl text-left text-white py-12 pl-12">ACTIVITY & PROJECT</div>
-                <div className="w-full">
+                <div className="w-full h-[calc(100vh-4rem-132px)]">
                     {
                         activity_arr.map((data) => (
-                            <div className="px-12 h-[calc(100vh-4rem)]" key={data.id}>
+                            <div className="px-12 " key={data.id}>
                                 <div className={`absolute bottom-0 translate-y-[50%] rounded-[50%] transition duration-[400ms] ease-out
                                     hover:translate-y-[0%] hover:ease-in
                                     ${data.id === 0 ? '' : data.id === 1 ? 'translate-x-[25%]' : data.id === 2 ? 'translate-x-[50%]' : ''}
                                 `}>
-                                    <Image 
-                                        src={require(`../src/${data.cdSrc}.png`)}
-                                        alt="spinCD"
-                                        className="w-[36vw] h-[36vw] hover:animate-[roundTurn_6s_linear_infinite]"
-                                    />
+                                    <a href={`projects/${data.prSrc}`}>
+                                        <Image 
+                                            src={require(`../src/${data.cdSrc}.png`)}
+                                            alt="spinCD"
+                                            className="w-[36vw] h-[36vw] hover:animate-[roundTurn_6s_linear_infinite]"
+                                        />
+                                    </a>
                                 </div>
                             </div>
                         ))
