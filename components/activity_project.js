@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link";
 import { useRef, useEffect } from "react"
 import useScrollRedux from "../hooks/useScrollRedux";
 import { dispatchActivity_Project } from "../store/modules/scroll";
@@ -79,13 +80,13 @@ export default function Activity_Project() {
                                     hover:translate-y-[0%] hover:ease-in
                                     ${data.id === 0 ? '' : data.id === 1 ? 'translate-x-[25%]' : data.id === 2 ? 'translate-x-[50%]' : ''}
                                 `}>
-                                    <a href={`projects/${data.prSrc}`}>
+                                    <Link href={`projects/${data.prSrc}`}>
                                         <Image 
                                             src={require(`../src/${data.cdSrc}.png`)}
                                             alt="spinCD"
                                             className="w-[36vw] h-[36vw] hover:animate-[roundTurn_6s_linear_infinite]"
                                         />
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         ))
