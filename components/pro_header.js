@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 import useScrollRedux from "../hooks/useScrollRedux";
 
@@ -14,11 +15,11 @@ export default function ProHeader() {
     return (
         <div className="NanumSquareNeo-Variable w-full px-12 fixed z-40 bg-[#D7E9FF] min-w-[516px] border-b font-bold">
             <div className="flex justify-between items-center h-16 ">
-                <a href="/" onClick={()=>toActivity_Project()}>
+                <Link to="/" onClick={()=>toActivity_Project()}>
                     <div className="text-lg">
                         Home
                     </div>
-                </a>
+                </Link>
                 {/* <div className="hidden md:flex gap-6">
                     <div >
                         Activity & Projects

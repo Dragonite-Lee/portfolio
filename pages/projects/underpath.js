@@ -12,7 +12,7 @@ export default function Underpath() {
             <div className="bg-[#D7E9FF] p-20 Pretendard-Regular">
                 <div className="text-3xl Pretendard-Bold pb-24">   
                     Underpath UIUX 프로그램은 UI UX에 대한 기초를 알려주며, 매주 과제를 수행해오면, <br />
-                    실무자분이 피드백을 해주며, "실무에선 이렇더라 이런 관점이 좋더라" 얘기해주는 멘토링 프로그램입니다.
+                    실무자분이 피드백을 해주며, 실무에선 이렇더라 이런 관점이 좋더라 얘기해주는 멘토링 프로그램입니다.
                 </div>  
                 <div className="text-2xl flex justify-evenly align-center pb-24">
                     <div>
